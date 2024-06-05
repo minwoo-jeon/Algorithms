@@ -2,18 +2,14 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String a = sc.next();
-        String answer = "";
-        
-        for(int i = 0; i<a.length(); i++){
-            char c = a.charAt(i);
-            if(Character.isUpperCase(c)){
-                answer += Character.toLowerCase(c);
-            }else{
-                answer += Character.toUpperCase(c);
+       Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if('A'<= ch && ch <='Z'){
+                System.out.print((char) ('a' +  ch - 'A'));
             }
+            else System.out.print((char) ('A' + ch -'a'));
         }
-       System.out.println(answer);
     }
 }
